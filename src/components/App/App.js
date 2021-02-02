@@ -15,10 +15,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <h1>Turing Yearbook</h1>
-        <h1>Le Staff</h1>
+          <h1>Turing Yearbook</h1>
+          <h1>Le Staff</h1>
         </header>
-          YOUR CODE GOES HERE
+        <Cohort />
       </div>
     );
   }
