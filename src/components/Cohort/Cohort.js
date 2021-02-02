@@ -2,12 +2,23 @@ import React from 'react';
 import Person from '../Person/Person';
 import './Cohort.css';
 
-const Cohort = () => (
-  <Person
-    name='mainlyetcetera'
-    quote='Break off your attack and allow them to escape with their meager reward.'
-    superlative='Most likely to win at Chess'
-  />
-)
+const Cohort = members => {
+  const stMembers = members.staffMembers;
+  const memberCards = stMembers.map(member => (
+    <Person
+      key={member.id}
+      photo={member.photo}
+      name={member.name}
+      quote={member.quote}
+      superlative={member.superlative}
+    />
+  ));
+
+  return (
+    <section className='staff-list'>
+      {memberCards}
+    </section>
+  )
+}
 
 export default Cohort;
